@@ -1,1 +1,1 @@
-# Automated-Ice-Wedge-Polygon-Trough-Recognition
+# Lightweight-U-Net-for-Satellite-Image-Segmentation
