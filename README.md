@@ -10,7 +10,7 @@ This repository contains Python code for U-Net based-semantic segmentation (**in
 
 
 
-Five scripts are included:
+Five scripts are included. Please change the paths to your data, as I have not changed them:
 ```
 1) unet_model.py: Contains function for U-Net model built in Keras.
 2) train_unet.py: Contains full training/validation/testing pipeline with data loaders, as well as code for detailed scikit-learn segmentation metrics and a confusion matrix.
@@ -20,7 +20,7 @@ Five scripts are included:
 ```
 
 # Data
-Since the original data is commercially-licensed, it cannot be shared in this repository for legal reasons. However, this pipeline should work with any satellite imagery/masks as long as input data is split into tiles. Your dataset directory should look similar to the following:
+Since the original data is commercially-licensed, it cannot be shared in this repository for legal reasons. However, this pipeline should work with any satellite imagery/masks as long as input data is split into tiles. Your dataset directory should look similar to the following.:
 ```   
 dataset
 └───training_images
