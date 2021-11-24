@@ -20,7 +20,7 @@ Five scripts are included. Please change the paths to your data, since they are 
 ```
 
 # Data
-Since the original data is commercially-licensed, it cannot be shared in this repository for legal reasons. However, this pipeline should work with any satellite imagery/masks as long as input data is split into tiles. Your dataset directory should look similar to the following.:
+Since the original data is commercially-licensed, it cannot be shared in this repository for legal reasons. However, this pipeline should work with any satellite imagery/masks as long as input data is split into tiles. Your dataset directory should look similar to the following:
 ```   
 dataset
 └───training_images
