@@ -7,9 +7,7 @@ This repository contains Python code for U-Net based-semantic segmentation (**in
 
 <img src="https://user-images.githubusercontent.com/77365021/143181377-90d31669-15fa-4797-97e2-ee5f0a544647.png" width="400">     <img src="https://user-images.githubusercontent.com/77365021/143181383-6bf2f5a6-c5a3-4640-9cb5-f5196a99ee74.png" width="400">
 
-
-
-
+## Code
 Five scripts are included. Please change the paths to your data, since they are the paths related to my directory:
 ```
 1) unet_model.py: Contains function for U-Net model built in Keras.
@@ -19,7 +17,7 @@ Five scripts are included. Please change the paths to your data, since they are 
 5) predict.py: Contains inference pipeline for use of trained U-Net in inference mode (predicting on unseen imagery).
 ```
 
-# Data
+## Data
 Since the original data is commercially-licensed, it cannot be shared in this repository for legal reasons. However, this pipeline should work with any satellite imagery/masks as long as input data is split into tiles. Your dataset directory should look similar to the following:
 ```   
 dataset
@@ -49,11 +47,11 @@ dataset
 |
 ```
 
-# Workflow
+## Workflow
 In the case of this approach, preprocessing.py should be used to apply the desired morphological filters on the oiginal image patches first, then data_augmentor.py should be used first to obtain the desired number of augmented images from the preprocessed images. However, augmentation should only be applied on training images/masks. Offline augmentation is used in this case, rather than online augmentation, meaning augmentation is applied before training as opposed to applying augmentations on images as they are being fed to the model in real time. The dataset for the original project contained very few images, so synthesizing new images beforehand allowed for better performance and was not constrained by performance. The workflow for this U-Net-based segmentation approach with augmentation and morphological filtering looks like this:
 ![RCOP_workflow](https://user-images.githubusercontent.com/77365021/143179726-b8a85806-3876-467e-942a-faf63ddc7620.png)
 
-# U-Net
+## U-Net
 The model is an efficient vanilla U-Net with dropout and batch normalization built in Keras. Input channels, intial number of filters, and filter growth factor can be adjusted in train_unet.py. A GPU was employed in the original project, with code included for GPU configuration in train_unet.py (which can be removed if not using GPU). 
 ```
 Model: "model_1"
